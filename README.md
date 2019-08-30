@@ -16,13 +16,13 @@ $storage = new Flatbase\Storage\Filesystem('/path/to/storage/dir');
 $flatbase = new Flatbase\Flatbase($storage);
 
 $flatbase->insert()->in('users')
-    ->set(['name' => 'Adam', 'height' => "6'4"])
+    ->set(['name' => 'Mark', 'height' => "6'4"])
     ->execute();
 
 $flatbase->read()->in('users')
-    ->where('name', '=', 'Adam')
+    ->where('name', '=', 'Mark')
     ->first();
-// (array) ['name' => 'Adam', 'height' => "6'4"]
+// (array) ['name' => 'Mark', 'height' => "6'4"]
 
 ```
     
@@ -105,7 +105,7 @@ $flatbase->delete()->in('users')->where('id', '==', 5)->execute();
 
 ```php
 $flatbase->insert()->in('users')->set([
-    'name' => 'Adam',
+    'name' => 'Mark',
     'country' => 'UK',
     'language' => 'English'
 ])->execute();
@@ -125,7 +125,7 @@ Or just some records:
 $flatbase->update()
     ->in('users')
     ->set(['country' => 'IE',])
-    ->where('name', '==', 'Adam')
+    ->where('name', '==', 'Mark')
     ->execute();
 ```
 
@@ -184,16 +184,16 @@ php flatbase read users --first
 php flatbase read users --count
 
 # Get users matching some where clauses
-php flatbase read users --where "name,==,Adam" --where "age,<,30"
+php flatbase read users --where "name,==,Mark" --where "age,<,30"
 
 # Update some record(s)
 php flatbase update users --where "age,<,18" --where "age,>,12" ageGroup=teenager
 
 # Insert a new record
-php flatbase insert users name=Adam age=25 country=UK
+php flatbase insert users name=Mark age=25 country=UK
 
 # Delete some record(s)
-php flatbase delete users --where "name,==,Adam"
+php flatbase delete users --where "name,==,Mark"
 ```
 
 For more info on the CLI, use one of the `help` commands
@@ -222,7 +222,7 @@ Data is stored in a native PHP serialized array using [PHPSerializer](https://gi
 ```php
 $flatbase->insert()->in('users')->set([
     'id' => 1,
-    'name' => 'Adam',
+    'name' => 'Mark',
     'added' => new DateTime()
 ])->execute();
 
