@@ -28,7 +28,7 @@ $flatbase->read()->in('users')
     
 ## Installation
 
-    composer require flatbase/flatbase
+    composer require imrgrgs/flatbase
 
 ## Usage
 
@@ -168,8 +168,6 @@ php vendor/bin/flatbase read users --path="some/path/to/storage"
 ```
 
 
-### Demo
-<img src="https://raw.githubusercontent.com/adamnicholson/flatbase/master/cli-demo.gif" />
 
 ### Usage
 
@@ -211,7 +209,7 @@ php flatbase delete --help
 What are some of the advantages of a flat file database?
 
 #### It's really easy to get started
-Just add `flatbase/flatbase` to your `composer.json` and you're rolling. No need for any other services running.
+Just add `imrgrgs/flatbase` to your `composer.json` and you're rolling. No need for any other services running.
 
 #### It's schema-less
 You don't have to worry about defining a schema, writing migration scripts, or any of that other boring stuff. Just instantiate `Flatbase` and start giving it data. This is particularly useful when developing/prototyping new features.
@@ -241,4 +239,4 @@ Reading data out is certainly a lot slower, and although there's lots of places 
 
 ## License
 
-Flatbase is licensed under the MIT License - see the `LICENSE.txt` file for details
+Flatbase is licensed under the MIT License - see the `LICENSE` file for details
